@@ -1,17 +1,3 @@
-// package ehg;
-
-// /**
-//  * Hello world!
-//  *
-//  */
-// public class App 
-// {
-//     public static void main( String[] args )
-//     {
-//         System.out.println( "Hello World!" );
-//     }
-// }
-
 package ehg.test;
 
 import java.io.IOException;
