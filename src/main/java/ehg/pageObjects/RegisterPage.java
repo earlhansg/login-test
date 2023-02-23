@@ -16,7 +16,7 @@ public class RegisterPage extends BasePage {
     By lastNameField = By.cssSelector("input#inputLastName");
     By emailAddressField = By.cssSelector("input#inputEmail");
     By dialCodeSelectMenu = By.cssSelector(".flag-container");
-    By dialCodeListMenu = By.cssSelector(".country-list [data-dial-code='1']:nth-of-type(2)");
+    By dialPHCode = By.cssSelector("[data-dial-code='63']");
     By phoneNumberField = By.cssSelector("input#inputPhone");
     By companyNameField = By.cssSelector("input#inputCompanyName");
     By streetAddressField = By.cssSelector("input[name='address1']");
@@ -24,12 +24,12 @@ public class RegisterPage extends BasePage {
     By cityField = By.cssSelector("input#inputCity");
     By stateField = By.cssSelector("input#stateinput");
     By postCodeField = By.cssSelector("input#inputPostcode");
-    By countryDropdownMenu = By.cssSelector("input#inputPostcode");
+    By countryDropdownMenu = By.cssSelector("select#inputCountry");
     By mobileField = By.cssSelector("input#customfield2");
     By passwordField = By.cssSelector("input[name='password']");
     By confirmPasswordField = By.cssSelector("input[name='password2']");
     By generatePasswordButton = By.cssSelector(".btn.btn-default.btn-sm.btn-sm-block.generate-password");
-    By onJoinSwitch = By.cssSelector(".bootstrap-switch-handle-on");
+    By onJoinSwitch = By.cssSelector(".bootstrap-switch.bootstrap-switch-animate.bootstrap-switch-on.bootstrap-switch-small.bootstrap-switch-wrapper");
     By offJoinSwitch = By.cssSelector(".bootstrap-switch-handle-off");
     By notRobotCheckbox = By.cssSelector("span#recaptcha-anchor > div:nth-of-type(1)");
     By registerButton =  By.xpath("//form[@id='frmCheckout']//input[@value='Register']");
@@ -46,7 +46,7 @@ public class RegisterPage extends BasePage {
 
     public WebElement getLastNameField() throws IOException {
         this.driver = getDriver();
-        return driver.findElement(firstNameField);
+        return driver.findElement(lastNameField);
     }
 
     public WebElement getEmailAddressField() throws IOException {
@@ -59,9 +59,9 @@ public class RegisterPage extends BasePage {
         return driver.findElement(dialCodeSelectMenu);
     }
 
-    public WebElement getDialCodeListMenu() throws IOException {
+    public WebElement getDialPHCode() throws IOException {
         this.driver = getDriver();
-        return driver.findElement(dialCodeListMenu);
+        return driver.findElement(dialPHCode);
     }
 
     public WebElement getPhoneNumberField() throws IOException {
