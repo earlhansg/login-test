@@ -29,10 +29,8 @@ public class RegisterPage extends BasePage {
     By passwordField = By.cssSelector("input[name='password']");
     By confirmPasswordField = By.cssSelector("input[name='password2']");
     By generatePasswordButton = By.cssSelector(".btn.btn-default.btn-sm.btn-sm-block.generate-password");
-    By onJoinSwitch = By.cssSelector(".bootstrap-switch.bootstrap-switch-animate.bootstrap-switch-on.bootstrap-switch-small.bootstrap-switch-wrapper");
-    By offJoinSwitch = By.cssSelector(".bootstrap-switch-handle-off");
-    By notRobotCheckbox = By.cssSelector("span#recaptcha-anchor > div:nth-of-type(1)");
-    By registerButton =  By.xpath("//form[@id='frmCheckout']//input[@value='Register']");
+    By toggleJoinSwitch = By.cssSelector(".bootstrap-switch.bootstrap-switch-animate.bootstrap-switch-on.bootstrap-switch-small.bootstrap-switch-wrapper");
+    By registerButton =  By.cssSelector(".btn.btn-large.btn-primary.btn-recaptcha");
 
     public RegisterPage() throws IOException {
         super();
@@ -124,19 +122,9 @@ public class RegisterPage extends BasePage {
         return driver.findElement(generatePasswordButton);
     }
 
-    public WebElement getOnJoinSwitch() throws IOException {
+    public WebElement getToggleJoinSwitch() throws IOException {
         this.driver = getDriver();
-        return driver.findElement(onJoinSwitch);
-    }
-
-    public WebElement getOffJoinSwitch() throws IOException {
-        this.driver = getDriver();
-        return driver.findElement(offJoinSwitch);
-    }
-
-    public WebElement getNotRobotCheckbox() throws IOException {
-        this.driver = getDriver();
-        return driver.findElement(notRobotCheckbox);
+        return driver.findElement(toggleJoinSwitch);
     }
 
     public WebElement getRegisterButton() throws IOException {
