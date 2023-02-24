@@ -31,6 +31,7 @@ public class RegisterPage extends BasePage {
     By generatePasswordButton = By.cssSelector(".btn.btn-default.btn-sm.btn-sm-block.generate-password");
     By generatePasswordOutputField = By.xpath("/html//input[@id='inputGeneratePasswordOutput']");
     By toggleJoinSwitch = By.cssSelector(".bootstrap-switch.bootstrap-switch-animate.bootstrap-switch-on.bootstrap-switch-small.bootstrap-switch-wrapper");
+    By imNotRobotChechBox = By.xpath("/html//span[@id='recaptcha-anchor']");
     By registerButton =  By.cssSelector(".btn.btn-large.btn-primary.btn-recaptcha");
 
     public RegisterPage() throws IOException {
@@ -131,6 +132,11 @@ public class RegisterPage extends BasePage {
     public WebElement getToggleJoinSwitch() throws IOException {
         this.driver = getDriver();
         return driver.findElement(toggleJoinSwitch);
+    }
+
+    public WebElement getImNotRobotChechBox() throws IOException {
+        this.driver = getDriver();
+        return driver.findElement(imNotRobotChechBox);
     }
 
     public WebElement getRegisterButton() throws IOException {

@@ -49,7 +49,7 @@ public class SignUpTest extends Hooks {
         register.getCityField().sendKeys("Cagayan de Oro City");
         register.getStateField().sendKeys("Misamis Oriental");
         register.getPostCodeField().sendKeys("9000");
-        
+
         // creating an object of the menu country
         Select menuCountry = new Select(register.getCountryDropdownMenu());
         menuCountry.selectByValue("PH");
@@ -63,8 +63,8 @@ public class SignUpTest extends Hooks {
 
         // click im not a robot in capcha
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
-        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("/html//span[@id='recaptcha-anchor']"))).click();
-        
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(register.getImNotRobotChechBox())).click();
+
         Thread.sleep(3000);
 
         // switch to window 1
