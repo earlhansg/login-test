@@ -29,6 +29,7 @@ public class RegisterPage extends BasePage {
     By passwordField = By.cssSelector("input[name='password']");
     By confirmPasswordField = By.cssSelector("input[name='password2']");
     By generatePasswordButton = By.cssSelector(".btn.btn-default.btn-sm.btn-sm-block.generate-password");
+    By generatePasswordOutputField = By.xpath("/html//input[@id='inputGeneratePasswordOutput']");
     By toggleJoinSwitch = By.cssSelector(".bootstrap-switch.bootstrap-switch-animate.bootstrap-switch-on.bootstrap-switch-small.bootstrap-switch-wrapper");
     By registerButton =  By.cssSelector(".btn.btn-large.btn-primary.btn-recaptcha");
 
@@ -120,6 +121,11 @@ public class RegisterPage extends BasePage {
     public WebElement getGeneratePasswordButton() throws IOException {
         this.driver = getDriver();
         return driver.findElement(generatePasswordButton);
+    }
+
+    public WebElement getGeneratePasswordOutputField() throws IOException {
+        this.driver = getDriver();
+        return driver.findElement(generatePasswordOutputField);
     }
 
     public WebElement getToggleJoinSwitch() throws IOException {

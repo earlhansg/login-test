@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="ehg.test.SignUpTest">
+      <class name="ehg.test.SignUpWithGeneratePasswordTest">
         <methods>
+          <include name="RegisterUserWithGeneratePasswordTest"/>
           <include name="setup"/>
-          <include name="RegisterUserTest"/>
         </methods>
-      </class> <!-- ehg.test.SignUpTest -->
+      </class> <!-- ehg.test.SignUpWithGeneratePasswordTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
