@@ -56,18 +56,19 @@ public class SignUpWithGeneratePasswordTest extends Hooks {
 
         register.getMobileField().sendKeys("1234567");
         register.getGeneratePasswordButton().click();
+
         Thread.sleep(3000);
-        new WebDriverWait(getDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("/html//div[@id='modalGeneratePassword']/div[@class='modal-dialog']//button[@type='submit']"))).click();
-        System.out.println("The password generated is " + register.getGeneratePasswordOutputField().getAttribute("value"));
+
+        new WebDriverWait(getDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(register.getModalGeneratePassword())).click();
         String generatedPassword = register.getGeneratePasswordOutputField().getAttribute("value");
-        new WebDriverWait(getDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("/html//button[@id='btnGeneratePasswordInsert']"))).click();
+        new WebDriverWait(getDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(register.getGeneratePasswordInsert())).click();
         System.out.println("The password put in variable " + generatedPassword);
 
         Thread.sleep(10000);
 
         // click im not a robot in capcha
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
-        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("/html//span[@id='recaptcha-anchor']"))).click();
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(register.getImNotRobotChechBox())).click();
         
         Thread.sleep(3000);
 

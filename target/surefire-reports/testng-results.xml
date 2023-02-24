@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-25T03:20:32 CST" name="Suite" finished-at="2023-02-25T03:20:57 CST" duration-ms="25058">
+  <suite started-at="2023-02-25T03:37:35 CST" name="Suite" finished-at="2023-02-25T03:37:55 CST" duration-ms="20525">
     <groups>
     </groups>
-    <test started-at="2023-02-25T03:20:32 CST" name="Test" finished-at="2023-02-25T03:20:57 CST" duration-ms="25058">
-      <class name="ehg.test.SignUpTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:ehg.test.SignUpTest@f0da945]" started-at="2023-02-25T03:20:32 CST" name="setup" finished-at="2023-02-25T03:20:35 CST" duration-ms="3316" status="PASS">
+    <test started-at="2023-02-25T03:37:35 CST" name="Test" finished-at="2023-02-25T03:37:55 CST" duration-ms="20525">
+      <class name="ehg.test.SignUpWithGeneratePasswordTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ehg.test.SignUpWithGeneratePasswordTest@ffaa6af]" started-at="2023-02-25T03:37:35 CST" name="setup" finished-at="2023-02-25T03:37:38 CST" duration-ms="3417" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="RegisterUserTest()[pri:0, instance:ehg.test.SignUpTest@f0da945]" started-at="2023-02-25T03:20:35 CST" name="RegisterUserTest" finished-at="2023-02-25T03:20:57 CST" duration-ms="21721" status="PASS">
+        <test-method signature="RegisterUserWithGeneratePasswordTest()[pri:0, instance:ehg.test.SignUpWithGeneratePasswordTest@ffaa6af]" started-at="2023-02-25T03:37:38 CST" name="RegisterUserWithGeneratePasswordTest" finished-at="2023-02-25T03:37:55 CST" duration-ms="16510" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterUserTest -->
-      </class> <!-- ehg.test.SignUpTest -->
+        </test-method> <!-- RegisterUserWithGeneratePasswordTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ehg.test.SignUpWithGeneratePasswordTest@ffaa6af]" started-at="2023-02-25T03:37:55 CST" name="tearDown" finished-at="2023-02-25T03:37:55 CST" duration-ms="583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ehg.test.SignUpWithGeneratePasswordTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

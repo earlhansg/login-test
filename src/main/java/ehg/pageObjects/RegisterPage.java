@@ -31,6 +31,8 @@ public class RegisterPage extends BasePage {
     By generatePasswordButton = By.cssSelector(".btn.btn-default.btn-sm.btn-sm-block.generate-password");
     By generatePasswordOutputField = By.xpath("/html//input[@id='inputGeneratePasswordOutput']");
     By toggleJoinSwitch = By.cssSelector(".bootstrap-switch.bootstrap-switch-animate.bootstrap-switch-on.bootstrap-switch-small.bootstrap-switch-wrapper");
+    By modalGeneratePassword = By.xpath("/html//div[@id='modalGeneratePassword']/div[@class='modal-dialog']//button[@type='submit']");
+    By generatePasswordInsert = By.xpath("/html//button[@id='btnGeneratePasswordInsert']");
     By imNotRobotChechBox = By.xpath("/html//span[@id='recaptcha-anchor']");
     By registerButton =  By.cssSelector(".btn.btn-large.btn-primary.btn-recaptcha");
 
@@ -127,6 +129,16 @@ public class RegisterPage extends BasePage {
     public WebElement getGeneratePasswordOutputField() throws IOException {
         this.driver = getDriver();
         return driver.findElement(generatePasswordOutputField);
+    }
+
+    public WebElement getModalGeneratePassword() throws IOException {
+        this.driver = getDriver();
+        return driver.findElement(modalGeneratePassword);
+    }
+
+    public WebElement getGeneratePasswordInsert() throws IOException {
+        this.driver = getDriver();
+        return driver.findElement(generatePasswordInsert);
     }
 
     public WebElement getToggleJoinSwitch() throws IOException {
