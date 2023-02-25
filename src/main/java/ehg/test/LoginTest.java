@@ -25,7 +25,6 @@ public class LoginTest extends Hooks{
 
         // creating an object of the Homepage
         Homepage home = new Homepage();
-        // home.driver.manage().window().maximize();
         home.getLoginButtonLink().click();
 
         ArrayList<String> windowsHandles = new ArrayList<String>(getDriver().getWindowHandles());
