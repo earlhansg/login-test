@@ -16,6 +16,7 @@ public class LoginPage extends BasePage {
     By passwordField = By.cssSelector("input#inputPassword");
     By notRobotCheckBox =  By.cssSelector("[data-phone-cc-input]");
     By loginButton = By.cssSelector("button#login");
+    By imNotRobotChechBox = By.xpath("/html//span[@id='recaptcha-anchor']");
     By rememberMeCheckBox = By.cssSelector("input[name='rememberme']");
     By createAccountLink = By.linkText("Create account");
 
@@ -48,6 +49,11 @@ public class LoginPage extends BasePage {
     public WebElement getRememberMeCheckBox() throws IOException {
         this.driver = getDriver();
         return driver.findElement(rememberMeCheckBox);
+    }
+
+    public WebElement getImNotRobotChechBox() throws IOException {
+        this.driver = getDriver();
+        return driver.findElement(imNotRobotChechBox);
     }
 
     public WebElement getCreateAccountLink() throws IOException {

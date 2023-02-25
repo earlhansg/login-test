@@ -4,8 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <!-- <class name="ehg.App"/> -->
-      <class name="ehg.test.SignUpTest"/>
-      <class name="ehg.test.SignUpWithGeneratePasswordTest"/>
+      <!-- <class name="ehg.test.SignUpTest"/>
+      <class name="ehg.test.SignUpWithGeneratePasswordTest"/> -->
+      <class name="ehg.test.LoginTest"/>
     </classes>
   </test> 
   <!-- Test -->

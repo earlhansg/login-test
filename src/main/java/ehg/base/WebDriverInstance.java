@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -36,7 +37,11 @@ public class WebDriverInstance {
 		if (prop.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + "\\src\\main\\java\\ehg\\drivers\\chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("start-maximized");
+			options.addArguments("disable-infobars");
+			options.addArguments("--disable-extensions");
+			driver = new ChromeDriver(options);
 		} else if (prop.getProperty("browser").equals("firefox")) {
 			System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + "\\src\\main\\java\\ehg\\drivers\\geckodriver.exe");

@@ -2,7 +2,7 @@ package ehg.base;
 
 import java.io.IOException;
 
-import org.testng.annotations.AfterTest;
+// import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
@@ -18,9 +18,9 @@ public class Hooks extends BasePage {
 		getDriver().get(getUrl());
 	}
 
-	@AfterTest
-	public void tearDown() {
-		WebDriverInstance.cleanupDriver();
-	}
+	// @AfterTest
+	// public void tearDown() {
+	// 	WebDriverInstance.cleanupDriver();
+	// }
 
 }
